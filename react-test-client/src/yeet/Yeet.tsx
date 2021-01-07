@@ -18,7 +18,7 @@ export default class Yeet extends React.Component<IYeetProps,IYeetState> {
   
   public render() {
     return (
-      <StyledButton onClick={()=>console.log("AGREED")} disabled={true}>
+      <StyledButton onClick={()=>console.log("AGREED")}>
         {this.props.YeetName??"Yeet"}
       </StyledButton>
     );
@@ -32,14 +32,7 @@ const StyledButton=styled.button`
   border-color:blue;
   border-style:solid;
   margin:2px;
-
-  :hover{
-    background-color:wheat;
-  }
-  :active{
-    background-color:lime;
-  }
-  :disabled{
-    background-color:red;
+  ::selection{
+    background:white
   }
 `
